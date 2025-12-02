@@ -15,8 +15,8 @@ fn part_1(inp: &str) -> anyhow::Result<i32> {
     let mut z_count = 0;
 
     for line in inp.lines() {
-        let (dir, mag_raw) = line.split_at(1);
-        let mag: i32 = mag_raw.parse()?;
+        let (dir, mag) = line.split_at(1);
+        let mag: i32 = mag.parse()?;
 
         match dir {
             "L" => {
@@ -42,8 +42,8 @@ fn part_2(inp: &str) -> anyhow::Result<i32> {
     let mut z_count = 0;
 
     for line in inp.lines() {
-        let (dir, mag_raw) = line.split_at(1);
-        let mag: i32 = mag_raw.parse()?;
+        let (dir, mag) = line.split_at(1);
+        let mag: i32 = mag.parse()?;
 
         z_count += mag / 100;
 
